@@ -4,7 +4,8 @@ A new Flutter project.
 
 The Roll Dice app is a simple Flutter app I developed by following tutorials on flutter and dart. It allows users to roll a virtual dice with an image and a roll button on the main screen.
 
- file:///home/svazquez/Pictures/Screenshots/Screenshot%20from%202023-05-24%2020-09-54.png
+![Screenshot from 2023-05-24 20-09-54](https://github.com/vazzquex/myFlutterAppsProjects/assets/108772623/2ba93438-0c1b-4fbf-aaf0-5f6ff23e4435)
+
 
 ## Getting Started
 
