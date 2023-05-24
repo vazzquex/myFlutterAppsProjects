@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class StartScreen extends StatelessWidget {
-  const StartScreen({super.key});
+  const StartScreen(this.startQuiz, {super.key});
+
+  final void Function() startQuiz;
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +32,7 @@ class StartScreen extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(top: 30),
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: startQuiz,
                 style: ElevatedButton.styleFrom(
                     fixedSize: const Size(180, 60),
                     backgroundColor: const Color.fromARGB(147, 7, 172, 255)),
