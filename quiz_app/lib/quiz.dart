@@ -38,7 +38,6 @@ class _QuizState extends State<Quiz> {
           ),
           child: screenWidget,
         ),
-        // body: screenWidget,
       ),
     );
   }

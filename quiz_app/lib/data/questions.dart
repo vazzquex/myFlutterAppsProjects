@@ -11,21 +11,12 @@ const questions = [
     ],
   ),
   QuizQuestion(
-    '¿What is Flutter?',
+    '¿Which programming language is primarily used for Flutter?',
     [
       'Dart',
       'Java',
       'Swift',
       'Kotlin',
-    ],
-  ),
-  QuizQuestion(
-    '¿Which programming language is primarily used for Flutter?',
-    [
-      'A development framework',
-      'A programming language',
-      'An operating system',
-      'YES',
     ],
   ),
   QuizQuestion(
