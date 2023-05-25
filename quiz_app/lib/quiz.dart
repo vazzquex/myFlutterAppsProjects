@@ -29,7 +29,16 @@ class _QuizState extends State<Quiz> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: screenWidget,
+        body: Container(
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(colors: [
+              Color.fromARGB(255, 14, 186, 216),
+              Color.fromARGB(255, 33, 27, 192)
+            ], begin: Alignment.bottomLeft, end: Alignment.topRight),
+          ),
+          child: screenWidget,
+        ),
+        // body: screenWidget,
       ),
     );
   }

@@ -19,12 +19,7 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
     return SizedBox(
       width: double.infinity,
       child: Container(
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(colors: [
-            Color.fromARGB(255, 14, 186, 216),
-            Color.fromARGB(255, 33, 27, 192)
-          ], begin: Alignment.bottomLeft, end: Alignment.topRight),
-        ),
+        margin: const EdgeInsets.all(20),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
