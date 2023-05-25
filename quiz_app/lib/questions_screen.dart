@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:quiz_app/answer_button.dart';
+import 'package:quiz_app/data/questions.dart';
 
 class QuestionsScreen extends StatefulWidget {
   const QuestionsScreen({super.key});
@@ -12,43 +14,33 @@ class QuestionsScreen extends StatefulWidget {
 class _QuestionsScreenState extends State<QuestionsScreen> {
   @override
   Widget build(context) {
-    return Container(
-      decoration: const BoxDecoration(
-        gradient: LinearGradient(colors: [
-          Color.fromARGB(255, 14, 186, 216),
-          Color.fromARGB(255, 33, 27, 192)
-        ], begin: Alignment.bottomLeft, end: Alignment.topRight),
-      ),
-      child: SizedBox(
-        width: double.infinity,
+    final currentQuestion = questions[0];
+
+    return SizedBox(
+      width: double.infinity,
+      child: Container(
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(colors: [
+            Color.fromARGB(255, 14, 186, 216),
+            Color.fromARGB(255, 33, 27, 192)
+          ], begin: Alignment.bottomLeft, end: Alignment.topRight),
+        ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            const Text(
-              'Question',
-              style: TextStyle(
+            Text(
+              currentQuestion.text,
+              style: const TextStyle(
                 color: Colors.white,
                 fontSize: 28,
               ),
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: 40),
-            ElevatedButton(
-              onPressed: () {},
-              child: const Text('Answer1'),
-            ),
-            ElevatedButton(
-              onPressed: () {},
-              child: const Text('Answer2'),
-            ),
-            ElevatedButton(
-              onPressed: () {},
-              child: const Text('Answer3'),
-            ),
-            ElevatedButton(
-              onPressed: () {},
-              child: const Text('Answer4'),
-            ),
+            ...currentQuestion.answers.map((answer) {
+              return AnswerButton(answerText: answer, onPress: () {});
+            })
           ],
         ),
       ),

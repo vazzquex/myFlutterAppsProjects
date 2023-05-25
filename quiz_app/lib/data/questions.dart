@@ -7,7 +7,7 @@ const questions = [
       'A development framework',
       'A programming language',
       'An operating system',
-      'YES'
+      'YES',
     ],
   ),
   QuizQuestion(
@@ -25,12 +25,17 @@ const questions = [
       'A development framework',
       'A programming language',
       'An operating system',
-      'YES'
+      'YES',
     ],
   ),
   QuizQuestion(
     '¿What does Flutter use for rendering user interfaces?',
-    ['Widgets', 'JSX', 'HTML', 'XML'],
+    [
+      'Widgets',
+      'JSX',
+      'HTML',
+      'XML',
+    ],
   ),
   QuizQuestion(
     '¿Which IDEs are commonly used for Flutter development??',
