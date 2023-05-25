@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:quiz_app/data/questions.dart';
 import 'package:quiz_app/questions_screen.dart';
 import 'package:quiz_app/start_screen.dart';
+import 'package:quiz_app/results_screen.dart';
 
 class Quiz extends StatefulWidget {
   const Quiz({super.key});
@@ -18,7 +19,7 @@ class _QuizState extends State<Quiz> {
 
   void switchScreen() {
     setState(() {
-      activeScreen = 'question-screen';
+      activeScreen = 'questions-screen';
     });
   }
 
@@ -28,28 +29,40 @@ class _QuizState extends State<Quiz> {
     if (selectAnswer.length == questions.length) {
       setState(() {
         selectAnswer = [];
-        activeScreen = 'start-screen';
+        activeScreen = 'results-screen';
       });
     }
   }
 
   @override
   Widget build(context) {
-    final screenWidget = activeScreen == 'start-screen'
-        ? StartScreen(switchScreen)
-        : QuestionsScreen(
-            onSelectAnswer: chooseAnswer,
-          );
+    Widget screenWidget = StartScreen(switchScreen);
+
+    if (activeScreen == 'questions-screen') {
+      screenWidget = QuestionsScreen(
+        onSelectAnswer: chooseAnswer,
+      );
+    }
+
+    if (activeScreen == 'results-screen') {
+      screenWidget = ResultsScreen(
+        chosenAnswers: selectAnswer,
+      );
+    }
 
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: Container(
           decoration: const BoxDecoration(
-            gradient: LinearGradient(colors: [
-              Color.fromARGB(255, 14, 186, 216),
-              Color.fromARGB(255, 33, 27, 192)
-            ], begin: Alignment.bottomLeft, end: Alignment.topRight),
+            gradient: LinearGradient(
+              colors: [
+                Color.fromARGB(255, 14, 186, 216),
+                Color.fromARGB(255, 33, 27, 192)
+              ],
+              begin: Alignment.bottomLeft,
+              end: Alignment.topRight,
+            ),
           ),
           child: screenWidget,
         ),
