@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:quiz_app/data/questions.dart';
 import 'package:quiz_app/question_summery.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class ResultsScreen extends StatelessWidget {
   const ResultsScreen({super.key, required this.chosenAnswers});
@@ -41,17 +42,45 @@ class ResultsScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-                'You answered $numCorrectQuestion out $numTotalQuestion questions correctly!'),
+              'You answered $numCorrectQuestion out $numTotalQuestion questions correctly!',
+              style: GoogleFonts.roboto(
+                fontSize: 25,
+                color: Colors.white,
+                fontWeight: FontWeight.w600,
+              ),
+              textAlign: TextAlign.center,
+            ),
             const SizedBox(
-              height: 30,
+              height: 50,
             ),
             QuestionSummary(summaryData),
             const SizedBox(
-              height: 30,
+              height: 50,
             ),
             TextButton(
               onPressed: () {},
-              child: const Text('Restart Quiz!'),
+              style: ButtonStyle(
+                  padding: const MaterialStatePropertyAll(EdgeInsets.all(15)),
+                  foregroundColor: MaterialStateProperty.all(Colors.black),
+                  backgroundColor: MaterialStateProperty.all(
+                      const Color.fromARGB(255, 47, 216, 29))),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisSize: MainAxisSize.min,
+                children: const [
+                  Icon(Icons.cached_rounded, size: 30),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Text(
+                    'Restart Quiz!',
+                    style: TextStyle(
+                      fontSize: 20,
+                    ),
+                  ),
+                ],
+              ),
             ),
           ],
         ),
