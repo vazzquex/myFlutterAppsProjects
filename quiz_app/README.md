@@ -2,9 +2,6 @@
 
 A new Flutter project.
 
-![Screenshot from 2023-05-24 20-09-54](https://github.com/vazzquex/myFlutterAppsProjects/assets/108772623/2ba93438-0c1b-4fbf-aaf0-5f6ff23e4435)
-
-
 ## Getting Started
 
 This project is a starting point for a Flutter application.
