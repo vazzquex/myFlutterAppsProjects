@@ -12,7 +12,7 @@ class AnswerButton extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        Padding(padding: EdgeInsets.only(top: 15)),
+        const Padding(padding: EdgeInsets.only(top: 15)),
         ElevatedButton(
           onPressed: onPress,
           style: ElevatedButton.styleFrom(
