@@ -4,7 +4,7 @@ A new Flutter project.
 
 ## Getting Started
 
-<img src="https://github.com/vazzquex/myFlutterAppsProjects/assets/108772623/cd427c5b-b8a3-40e4-8419-ff2da952b9d7" width="100" 
+<img src="[https://your-image-url.type](https://github.com/vazzquex/myFlutterAppsProjects/assets/108772623/cd427c5b-b8a3-40e4-8419-ff2da952b9d7)" width="100" height="100">
 
 ![Screenshot from 2023-05-26 23-27-19](https://github.com/vazzquex/myFlutterAppsProjects/assets/108772623/cd427c5b-b8a3-40e4-8419-ff2da952b9d7)
 ![Screenshot from 2023-05-26 23-27-25](https://github.com/vazzquex/myFlutterAppsProjects/assets/108772623/be7aee9a-af84-4a33-93e1-15b837b8401d)
